@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="Module" type="HBoxContainer"]
+margin_right = 984.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModuleName" type="Label" parent="."]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+text = "Network Validation"
+valign = 1

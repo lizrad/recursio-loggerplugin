@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="DebugActive" type="CheckButton"]
+margin_left = 204.0
+margin_right = 280.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 30 )
