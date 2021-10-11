@@ -41,10 +41,22 @@ func _read_config_file():
 	if err != OK:
 		print("ERROR: Could not load config file!")
 	else:
+		_add_modes()
 		for module in config.get_sections():
 			_add_new_module(module)
 	_save_settings()
+
+
+func _add_modes():
+	var module_instance = module_config_scene.instance()
+	module_instance.get_node("ModuleName").text = "Modes:"
+	for mode in modes:
+		var label: Label = Label.new()
+		label.text = mode
+		module_instance.add_child(label)
+	logger_plugin_instance.get_node("ModulesBackground/ModulesScrollContainer/Modules").add_child(module_instance)
 	
+
 func _add_new_module(module):
 	var module_instance = module_config_scene.instance()
 	module_instance.get_node("ModuleName").text = module
